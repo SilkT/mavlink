@@ -1,6 +1,20 @@
 <?xml version="1.0"?>
 <mavlink>
   <include>common.xml</include>
+   <enums>
+     <enum name="MAV_TYPE_ADS">
+        <description>MAVLINK component type reported in HEARTBEAT message. Flight controllers must report the type of the vehicle on which they are mounted (e.g. MAV_TYPE_OCTOROTOR). All other components must report a value appropriate for their type (e.g. a camera must use MAV_TYPE_CAMERA).</description>
+        <entry value="100" name="MAV_TYPE_BEACON">
+          <description>beacon</description>
+        </entry>
+        <entry value="101" name="MAV_TYPE_WEATHER_STATION">
+          <description>Weather station.</description>
+        </entry>
+        <entry value="102" name="MAV_TYPE_LIDAR">
+          <description>Lidar.</description>
+        </entry>
+      </enum>
+    </enums>
   <messages>
        <!-- FIXME to be removed / merged with SYSTEM_TIME -->
     <message id="2000" name="ADS_SENSOR">
