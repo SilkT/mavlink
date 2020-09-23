@@ -39,5 +39,12 @@
       <field type="uint8_t" name="target_system">0: request ping from all receiving systems. If greater than 0: message is a ping response and number is the system id of the requesting system</field>
       <field type="uint8_t" name="target_component">0: request ping from all receiving components. If greater than 0: message is a ping response and number is the component id of the requesting component.</field>
     </message>
+    <message id="2001" name="ADS_LIST_COMP_ID">
+      <description></description>
+      <field type="uint8_t" name="numbCompId"> </field>
+      <field type="uint8_t[10]" name="list"></field>
+      <field type="uint8_t" name="target_system">0: request ping from all receiving systems. If greater than 0: message is a ping response and number is the system id of the requesting system</field>
+      <field type="uint8_t" name="target_component">0: request ping from all receiving components. If greater than 0: message is a ping response and number is the component id of the requesting component.</field>
+    </message>
   </messages>
 </mavlink>
