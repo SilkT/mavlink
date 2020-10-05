@@ -46,5 +46,24 @@
       <field type="uint8_t" name="target_system">0: request ping from all receiving systems. If greater than 0: message is a ping response and number is the system id of the requesting system</field>
       <field type="uint8_t" name="target_component">0: request ping from all receiving components. If greater than 0: message is a ping response and number is the component id of the requesting component.</field>
     </message>
+    <message id="2002" name="ADS_LIDAR_DATA">
+      <description>LIDAR sensor measurements data </description>
+      <field type="uint32_t" name="sensor0">TOF sensor #0 measurement, mm</field>
+      <field type="float[4]" name="q0">TOF sensor #0 orientation quaternion (w, x, y, z order, zero-rotation is 1, 0, 0, 0)</field>
+      <field type="uint32_t" name="sensor1">TOF sensor #1 measurement, mm</field>
+      <field type="float[4]" name="q1">TOF sensor #1 orientation quaternion (w, x, y, z order, zero-rotation is 1, 0, 0, 0)</field>
+      <field type="uint32_t" name="sensor2">TOF sensor #2 measurement, mm</field>
+      <field type="float[4]" name="q2">TOF sensor #2 orientation quaternion (w, x, y, z order, zero-rotation is 1, 0, 0, 0)</field>
+      <field type="uint32_t" name="sensor3">TOF sensor #3 measurement, mm</field>
+      <field type="float[4]" name="q3">TOF sensor #3 orientation quaternion (w, x, y, z order, zero-rotation is 1, 0, 0, 0)</field>
+      <field type="uint32_t" name="sensor4">TOF sensor #4 measurement, mm</field>
+      <field type="float[4]" name="q4">TOF sensor #4 orientation quaternion (w, x, y, z order, zero-rotation is 1, 0, 0, 0)</field>
+      <field type="uint32_t" name="sensor5">TOF sensor #5 measurement, mm</field>
+      <field type="float[4]" name="q5">TOF sensor #5 orientation quaternion (w, x, y, z order, zero-rotation is 1, 0, 0, 0)</field>
+      <field type="uint32_t" name="sensor6">TOF sensor #6 measurement, mm</field>
+      <field type="float[4]" name="q6">TOF sensor #6 orientation quaternion (w, x, y, z order, zero-rotation is 1, 0, 0, 0)</field>
+      <field type="uint8_t" name="target_network">Network ID (0 for broadcast)</field>
+      <field type="uint8_t" name="target_system">System ID (0 for broadcast)</field>
+    </message>
   </messages>
 </mavlink>
