@@ -35,7 +35,7 @@
       <field type="uint16_t" name="totalAirflow">counter airflow during all this time totalAirflow[l] </field>
       <field type="float"    name="airSpeed">absolute air speed m/s</field>
       <field type="float"    name="area">area pipe cm^2</field>
-      <field type="uint8_t"    name="bat">precent battery 0-100%</field>
+      <field type="uint8_t"    name="intV">internal voltage V = (float)intV/10</field>
       <field type="uint8_t" name="target_system">0: request ping from all receiving systems. If greater than 0: message is a ping response and number is the system id of the requesting system</field>
       <field type="uint8_t" name="target_component">0: request ping from all receiving components. If greater than 0: message is a ping response and number is the component id of the requesting component.</field>
     </message>
