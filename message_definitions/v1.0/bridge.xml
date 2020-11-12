@@ -19,5 +19,10 @@
       <field type="uint16_t" name="param_index">Index of this onboard parameter</field>
       <field type="uint16_t" name="param_count">Total number of onboard parameters</field>
     </message>
+    <message id="3001" name="BRIDGE_PARAM_REQUEST_LIST">
+      <description>Request all parameters of this component. After this request, all parameters are emitted.</description>
+       <field type="uint8_t" name="target_system">0: request ping from all receiving systems. If greater than 0: message is a ping response and number is the system id of the requesting system</field>
+      <field type="uint8_t" name="target_component">0: request ping from all receiving components. If greater than 0: message is a ping response and number is the component id of the requesting component.</field>
+    </message>
   </messages>
 </mavlink>
