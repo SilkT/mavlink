@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <mavlink>
-  <include>common.xml</include>
   <messages>
        <!-- FIXME to be removed / merged with SYSTEM_TIME -->
     <message id="3000" name="BRIDGE_PARAM_VALUE_1">
