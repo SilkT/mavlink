@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<mavlink>
+<mavlink> 
   <messages>
        <!-- FIXME to be removed / merged with SYSTEM_TIME -->
     <message id="3000" name="BRIDGE_PARAM_VALUE_1">
@@ -16,6 +16,8 @@
       <field type="int8_t"    name="ARSPD_AUTOCAL">Enables automatic adjustment of ARSPD_RATIO during a calibration flight based on estimation of ground speed and true airspeed. </field>
       <field type="float" name="CAM_TRIGG_DIST">Distance in meters between camera triggers</field>
       <field type="int8_t" name="EK2_GPS_TYPE">This controls use of GPS measurements </field>
+      <field type="uint16_t" name="param_index">Index of this onboard parameter</field>
+      <field type="uint16_t" name="param_index">Total number of onboard parameters</field>
     </message>
   </messages>
 </mavlink>
