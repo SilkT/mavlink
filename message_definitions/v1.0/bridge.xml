@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<mavlink>
+  <include>common.xml</include>
+  <messages>
+       <!-- FIXME to be removed / merged with SYSTEM_TIME -->
+    <message id="3000" name="BRIDGE_PARAM_VALUE_1">
+      <description>Emit the value of a onboard parameter</description>
+      <field type="int32_t" name="ALT_HOLD_RTL"> Target altitude above home for RTL mode. Maintains current altitude if set to -1. Rally point altitudes are used if plane does not return to home.</field>
+      <field type="int16_t" name="WP_RADIUS">Defines the distance from a waypoint, that when crossed indicates the wp has been hit   				</field>
+      <field type="int16_t" name="RTL_RADIUS">Defines the radius of the loiter circle when in RTL mode. </field>
+      <field type="int8_t" name="FS_SHORT_ACTN">The action to take on a short (FS_SHORT_TIMEOUT) failsafe event </field>
+      <field type="int8_t" name="FS_LONG_ACTN">The action to take on a long (FS_LONG_TIMEOUT seconds) failsafe event. </field>
+      <field type="int8_t" name="FS_GCS_ENABL">Enable ground control station telemetry failsafe.  </field>
+      <field type="int32_t" name="TRIM_ARSPD_CM">Target airspeed in cm/s in automatic throttle modes. Value is as an indicated (calibrated/apparent) airspeed.</field>
+      <field type="int8_t" name="AHRS_GPS_USE">This controls whether to use dead-reckoning or GPS based navigation</field>
+      <field type="int8_t"    name="ARSPD_USE">Enables airspeed use for automatic throttle modes and replaces control from THR_TRIM. </field>
+      <field type="int8_t"    name="ARSPD_AUTOCAL">Enables automatic adjustment of ARSPD_RATIO during a calibration flight based on estimation of ground speed and true airspeed. </field>
+      <field type="float" name="CAM_TRIGG_DIST">Distance in meters between camera triggers</field>
+      <field type="int8_t" name="EK2_GPS_TYPE">This controls use of GPS measurements </field>
+    </message>
+  </messages>
+</mavlink>
