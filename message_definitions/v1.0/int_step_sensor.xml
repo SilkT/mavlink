@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<mavlink>
+   <enums>
+     	<enum name="MAV_ISS_CMD">
+	        <description>List cmd for msg ISS_CMD</description>
+	        <entry value="0" name="MAV_ISS_CMD_SET_ID">
+	        	<description>set id system</description>
+	        </entry>
+	        <entry value="1" name="MAV_ISS_CMD_GET_DESCRIPTOR_NODE">
+	        	<description>sends a descriptor node in response (ISS_DESCRIPTOR_NODE). param - node id , if param == 0 will send to all coonect node </description>
+	        </entry>
+            <entry value="2" name="MAV_ISS_CMD_GET_QUANTITY_NODE">
+	        	<description> quantity request node in network (msg ISS_QUANTITY_NODE)</description>
+	        </entry>
+    	</enum>
+    </enums>
+  <messages>
+    <message id="3000" name="ISS_CMD">
+      <description>Send cmd </description>
+      <field type="uint32_t" name="cmd" enum="MAV_ISS_CMD"> cmd enum MAV_ISS_CMD</field>
+      <field type="uint8_t" name="param" enum="MAV_ISS_CMD"> cmd enum MAV_ISS_CMD</field>
+    </message>
+    <message id="3001" name="ISS_CMD_ACK">
+      <description>Send cmd </description>
+      <field type="uint32_t" name="cmd" enum="MAV_ISS_CMD"> command confirmation</field>
+      <field type="int32_t" name="result"> 0 >= successful , 0> fail result = error code </field>
+    </message>
+    <message id="3002" name="ISS_RECEIVE_MSG">
+      <description>Send cmd </description>
+      <field type="uint8_t" name="sender"> id sender</field>
+      <field type="uint8_t" name="payload"> len data</field>
+      <field type="char[250]" name="data"> 0 >= successful , 0> fail result = error code </field>
+    </message>
+    <message id="3003" name="ISS_QUANTITY_NODE">
+      <description>quantity node in network </description>
+      <field type="uint8_t" name="quantity"> quantity node in network </field>
+    </message>
+    <message id="3004" name="ISS_DESCRIPTOR_NODE">
+      <description>desriptor node</description>
+      <field type="uint8_t" name="id"> id node </field>
+      <field type="uint8_t" name="hops"> number of jumps to node  </field>
+      <field type="uint8_t" name="isConnect"> state node , isConnect == 0 - disconnect, isConnect != 0 - connect</field>
+    </message>
+  </messages>
+</mavlink>
