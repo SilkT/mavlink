@@ -41,5 +41,16 @@
       <field type="uint8_t" name="hops"> number of jumps to node  </field>
       <field type="uint8_t" name="isConnect"> state node , isConnect == 0 - disconnect, isConnect != 0 - connect</field>
     </message>
+    <message id="3005" name="ISS_INIT_MESH">
+      <description>desriptor node</description>
+      <field type="uint8_t" name="id"> id system </field>
+    </message>
+    <message id="3006" name="ISS_SEND_MSG">
+      <description>Send cmd </description>
+      <field type="uint8_t" name="recipient"> id final recipient</field>
+      <field type="uint8_t" name="is_reliable"> is_reliable = 1 with confirmation , is_reliable = 0 without confirmation</field>
+      <field type="uint8_t" name="payload"> len data</field>
+      <field type="char[250]" name="data"> data </field>
+    </message>
   </messages>
 </mavlink>
