@@ -15,6 +15,12 @@
           <entry value="3" name="MAV_ISS_CMD_GET_GPS_DAT">
             <description> return data/state gps</description>
           </entry>
+          <entry value="4" name="MAV_ISS_CMD_REBOOT_DFU">
+            <description> reboot board into DFU mode</description>
+          </entry>
+          <entry value="5" name="MAV_ISS_CMD_SET_ALARM">
+            <description> set alarm state</description>
+          </entry>
     	</enum>
       <enum name="GPS_ISS_FIX_TYPE">
         <description>Type of GPS fix</description>
